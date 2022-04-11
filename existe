@@ -1,0 +1,7 @@
+#!/bin/bash
+#existance d'user entrer par clavier
+if grep "^$1:" /etc/passwd > /dev/null ; then
+echo "L'utilisateur $1 existe"
+else 
+echo "not found"
+fi

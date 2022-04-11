@@ -1,0 +1,19 @@
+#!/bin/bash
+#calcul une operation d'adition ou soustraction
+if test -z $1 -o -z $2 ; then
+	echo "un parametre est invalable"
+else 
+	case $3 in 
+		+)
+			res=$(($1+$2));
+			echo "le resulata d'operation est $res";;
+
+		-)
+			res=$(($1-$2));
+			echo "le resulata d'operation est $res";;
+
+		*) 
+			echo "operation invalid";;
+
+	esac
+fi
